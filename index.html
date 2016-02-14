@@ -1,0 +1,204 @@
+<html>
+<head>
+	<title>GEQgen</title>
+	<link rel="stylesheet" type="text/css" href="GEQgen.css" />
+	<script type="text/javascript" src="GEQgen.js"></script>
+	<noscript>
+		This page requires Javascript to be in enabled.
+	</noscript>
+</head>
+
+<body>
+	<div class="pageintro">
+		<h1>GEQgen</h1> 
+		<h6>A web-based XML code generator for PreSonus <abbr title="Graphic EQualizer">GEQ</abbr> presets</h6>
+		<strong>Navigation</strong>
+		<p>The decibel value for each frequency band can be typed in directly or incremented up and down with the arrow keys &#8593; and &#8595;. Tab &#x21B9; and Shift+Tab move right and left through the frequency bands. Values can range from a maximum 15.0 dB to a minimum -15.0 dB in increments of 0.1 dB. Invalid values will highlight in red.</p>
+	</div>
+	<div class="generator">
+		<h2>GEQ Preset Generator</h2>
+		<form name="GEQ" id="GEQ">			
+			<fieldset>
+				<legend>31-Band Graph (values in dB)</legend>
+				<div id="graph">
+					<div id="g1"></div>
+					<div id="g2"></div>
+					<div id="g3"></div>
+					<div id="g4"></div>
+					<div id="g5"></div>
+					<div id="g6"></div>
+					<div id="g7"></div>
+					<div id="g8"></div>
+					<div id="g9"></div>
+					<div id="g10"></div>
+					<div id="g11"></div>
+					<div id="g12"></div>
+					<div id="g13"></div>
+					<div id="g14"></div>
+					<div id="g15"></div>
+					<div id="g16"></div>
+					<div id="g17"></div>
+					<div id="g18"></div>
+					<div id="g19"></div>
+					<div id="g20"></div>
+					<div id="g21"></div>
+					<div id="g22"></div>
+					<div id="g23"></div>
+					<div id="g24"></div>
+					<div id="g25"></div>
+					<div id="g26"></div>
+					<div id="g27"></div>
+					<div id="g28"></div>
+					<div id="g29"></div>
+					<div id="g30"></div>
+					<div id="g31"></div>
+				</div>
+				<ul>
+					<li>
+						<input type="number" id="b1" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b1">20</label>
+					</li>
+					<li>
+						<input type="number" id="b2" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b2">25</label>
+					</li>
+					<li>
+						<input type="number" id="b3" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b3">32</label>
+					</li>
+					<li>
+						<input type="number" id="b4" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b4">40</label>
+					</li>
+					<li>
+						<input type="number" id="b5" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b5">50</label>
+					</li>
+					<li>
+						<input type="number" id="b6" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b6">64</label>
+					</li>
+					<li>
+						<input type="number" id="b7" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b7">80</label>
+					</li>
+					<li>
+						<input type="number" id="b8" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b8">100</label>
+					</li>
+					<li>
+						<input type="number" id="b9" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b9">125</label>
+					</li>
+					<li>
+						<input type="number" id="b10" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b10">160</label>
+					</li>
+					<li>
+						<input type="number" id="b11" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b11">200</label>
+					</li>
+					<li>
+						<input type="number" id="b12" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b12">250</label>
+					</li>
+					<li>
+						<input type="number" id="b13" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b13">320</label>
+					</li>
+					<li>
+						<input type="number" id="b14" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b14">400</label>
+					</li>
+					<li>
+						<input type="number" id="b15" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b15">500</label>
+					</li>
+					<li>
+						<input type="number" id="b16" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b16">640</label>
+					</li>
+					<li>
+						<input type="number" id="b17" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b17">800</label>
+					</li>
+					<li>
+						<input type="number" id="b18" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b18">1K</label>
+					</li>
+					<li>
+						<input type="number" id="b19" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b19">1.3K</label>
+					</li>
+					<li>
+						<input type="number" id="b20" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b20">1.6K</label>
+					</li>
+					<li>
+						<input type="number" id="b21" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b21">2K</label>
+					</li>
+					<li>
+						<input type="number" id="b22" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b22">2.5K</label>
+					</li>
+					<li>
+						<input type="number" id="b23" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b23">3.2K</label>
+					</li>
+					<li>
+						<input type="number" id="b24" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b24">4K</label>
+					</li>
+					<li>
+						<input type="number" id="b25" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b25">5K</label>
+					</li>
+					<li>
+						<input type="number" id="b26" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b26">6.4K</label>
+					</li>
+					<li>
+						<input type="number" id="b27" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b27">8K</label>
+					</li>
+					<li>
+						<input type="number" id="b28" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b28">10K</label>
+					</li>
+					<li>
+						<input type="number" id="b29" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b29">13K</label>
+					</li>
+					<li>
+						<input type="number" id="b30" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b30">16K</label>
+					</li>
+					<li>
+						<input type="number" id="b31" class='move' min="-15" max="15" step="0.1" value ="0" onchange="m(this, event)" onkeyup="m(this, event)" />
+						<label for="b31">20K</label>
+					</li>
+				</ul>				
+				<label for="name" id="forname" placeholder="Preset Name"></label><input type="text" id="name" value="Preset Name" size="30" maxlength="20" onfocus="empty(this)" onkeyup="clean()" onkeydown="clean()" />
+				<input type="button" form="GEQ" value="Reset" onClick="window.location.reload()" />
+			</fieldset>
+			<fieldset>
+				<legend>XML</legend>
+				<div id="instructions">
+					<p>Click on the XML code that appears to the left. Copy and paste that into a text file. Save it with same preset name plus ".xml" (e.g. "My First Preset.xml").</p>
+					<p>Put that file in the folder where Universal Control stores the GEQ presets. On a Mac that can be found in your user folder under:
+					<pre><code><textarea id="loc" rows="1" onClick="highlightall('loc')";>~/Documents/PreSonus/StudioLive/Library/Presets/geq</textarea></code></pre>
+					</p>
+					<p>Now when you fire up Universal Control you'll be able to load this preset onto your StudioLive console.</p>
+				</div>
+				<pre><code><textarea id="xml" rows="36" onClick="highlightall('xml')";>The XML code will automatically appear here. Edit the frequency band values using the input fields above.</textarea></code></pre>
+			</fieldset>
+		</form>
+	</div>
+	<div class="footer">
+		<small><strong>DISCLAIMER:</strong> This page is provided simply as a tool that hopefully makes audio engineering easier. No guarantees are given that it will work nor will responsibility be accepted for damages resulting from its use. Also, no claims of affiliation with <a href="http://presonus.com" title"presonus.com" alt="link to the official PreSonus website" target="_blank">PreSonus Audio Electronics, Inc.</a> is implied nor are any infringements of their intellectual property intended. Use at your own risk, for free, with joy, responsibility, good intentions, and pure heart.</p>
+		<p><a href="http:/github.com">Fork this project on GitHub</a> | <a href="https://github.com/scotttroyer/GEQgen/blob/master/LICENSE">MIT License</a> | Read more about <a href="http://scotttroyer.com">the author</a> of this project.</p>
+		</small>
+	</div>
+</body>
+</html>
