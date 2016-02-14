@@ -3,8 +3,7 @@ web-based XML code generator for PreSonus GEQ presets
 
 # Summary
 
-PreSonus GEQ presets are stored as XML. They are easy to edit using Universal Control (UC), but UC requires connection to a StudioLive device in order to operate fully.
-
+PreSonus GEQ presets are stored as XML. They are easy to edit using Universal Control (UC), but UC requires connection to a StudioLive (SL) device in order to operate fully. This web app allows users to generate presets without a connected SL device. Exact dB values may be typed in, making for easier manual conversion of manufacturer-supplied frequency response graphs into SL-ready presets.
 
 # Version History
 
