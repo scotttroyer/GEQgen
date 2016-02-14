@@ -1,0 +1,137 @@
+/* GEQgen.css
+* Version:	1.0
+* Author:	Scott Troyer
+* Site: 	http://scotttroyer.com
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change  - Thank you, Paul Irish. */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+	font: 1em Helvetica, Arial, sans-serif;
+	width: 1051px;
+	margin: 6em auto;
+}
+form {
+	font-family: 1em "Courier New", "Courier", monospace;
+}
+td {
+	text-align: right;
+}
+input[type=text] {
+	text-align: left;
+	padding: 0.5em 1em;
+}
+textarea {
+	width: 40em;
+	padding: 0.5em 1em;
+	border: 0;
+	outline: none;
+	resize: none;
+	overflow: hidden;
+}
+#loc {
+	width: 30em;
+	background: black;
+	color:white;
+}
+#xml {
+	color: gray;
+}
+
+input[type=number] {
+	text-align: center;
+	padding: 1em 0.1em;
+	margin: 0;
+	width: 3em;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[type=number]:invalid {
+    background-color: #FFCCCC;
+}
+input#name {
+	margin-top: 10px;
+}
+#forname {
+	display: none;
+}
+label {
+	display: block;
+	font-size: 0.4em;
+	text-align: center;
+	margin-top: 0.5em;
+}
+ul {
+	padding-left: 0;
+	margin-top: 0.5em;
+}
+ul li {
+	list-style-type: none;
+	padding-left: 1em;
+}
+pre {
+	margin: 0;
+}
+div#graph {
+	height: 300px;
+	width: 1024px;
+	border: 1px lightgray dotted;
+	background-image: -moz-repeating-linear-gradient(180deg,rgb(100,100,100),rgb(0,0,0)1px,rgb(0,0,0)29px,rgb(100,100,100)30px);
+	background-image: -webkit-repeating-linear-gradient(180deg,rgb(100,100,100),rgb(0,0,0)1px,rgb(0,0,0)29px,rgb(100,100,100)30px);
+	background-image: -o-repeating-linear-gradient(180deg,rgb(100,100,100),rgb(0,0,0)1px,rgb(0,0,0)29px,rgb(100,100,100)30px);
+	background-image: repeating-linear-gradient(180deg,rgb(100,100,100),rgb(0,0,0)1px,rgb(0,0,0)29px,rgb(100,100,100)30px);
+}
+div#graph:after {
+	height:270px;
+	border: 1px white dotted;
+}
+div#graph div {
+	display: block;
+	float: left;
+	width: 3.225%;
+	height:1px;
+	top: 150px;
+	position: relative;
+	background: mediumspringgreen;
+	display: block;
+	color: white;
+	font-size: 0.6em;
+	text-align: center;
+}
+.generator li {
+	display: block;
+	float: left;
+	padding: 0;
+	margin:0;
+}
+fieldset {
+	border: 1px black solid;
+	margin-bottom: 1em;
+}
+legend {	
+}
+code {
+	font-size: 0.7em;
+}
+.pageintro {
+	width:100%;
+}
+.generator {
+}
+#instructions {
+	float: right;
+	width: 40%;
+}
