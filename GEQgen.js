@@ -1,5 +1,5 @@
 /* GEQgen.js
-* Version:	1.0
+* Version:	1.1
 * Author:	Scott Troyer
 * Site: 	http://scotttroyer.com
 */
@@ -33,6 +33,7 @@ function m(sender, event) { // update the graph after a value change
 
 function xmlupdate() { // compile the XML
 	var name = document.getElementById('name').value; // grab the preset name
+	document.getElementById('filename').innerHTML = name + ".xml"; // update the file name field
 	var head = '&lt;?xml version="1.0" encoding="UTF-8"?&gt;\n&lt;document name="' + name + '"&gt;\n	&lt;PGROUP name="geqpreset"&gt;\n'; // generate the head portion of the XML file
 	var foot = '	&lt;/PGROUP&gt;\n &lt;/document&gt;'; // generate the foot portion of the XML file
 	var loop = ""; // initialize the loop portion of the XML file
