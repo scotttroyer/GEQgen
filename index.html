@@ -9,18 +9,19 @@
 </head>
 
 <body>
-	<div class="pageintro">
-		<small>&#9875; <a href="http://scotttroyer.com">http://scotttroyer.com</a>/<a href="http://scotttroyer.com/tools/">tools</a>/<a href="http://scotttroyer.com/tools/geqgen">geqgen</a></small>
+	<div id="pageintro">
+		<small>&#9875; <a href="http://scotttroyer.com">Scott Troyer</a> / <a href="http://scotttroyer.com/tools/">Tools</a> / <a href="http://scotttroyer.com/tools/geqgen">GEQgen</a></small>
 		<h1>GEQgen</h1> 
-		<h6>A web-based XML code generator for PreSonus <abbr title="Graphic EQualizer">GEQ</abbr> presets</h6>
-		<strong>Navigation</strong>
-		<p>The decibel value for each frequency band can be typed in directly or incremented up and down with the arrow keys &#8593; and &#8595;. Tab &#x21B9; and Shift+Tab move right and left through the frequency bands. Values can range from a maximum 15.0 dB to a minimum -15.0 dB in increments of 0.1 dB. Invalid values will highlight in red.</p>
+		<h6>A web-based XML code generator for PreSonus StudioLive <abbr title="Graphic EQualizer">GEQ</abbr> presets (v1.1)</h6>
+		<h2>What is this?</h2>
+		<p>This web app makes GEQ presets for first generation PreSonus StudioLive mixers. For more information, read <a href="http://scotttroyer.com/2016/02/geqgen-creates-studiolive-graphic-eq-presets-offline/" title="GEQgen Creates StudioLive Graphic EQ Presets Offline">this article</a>.</p>
 	</div>
-	<div class="generator">
-		<h2>GEQ Preset Generator</h2>
+	<div id="generator">	
 		<form name="GEQ" id="GEQ">			
 			<fieldset>
 				<legend>31-Band Graph (values in dB)</legend>
+				<h2>1. Create the EQ Curve</h2>
+				<p>The decibel value for each frequency band can be typed in directly or incremented up and down with the arrow keys &#8593; and &#8595;. Tab &#x21B9; and Shift+Tab move right and left through the frequency bands. Values can range from a maximum 15.0 dB to a minimum -15.0 dB in increments of 0.1 dB. Invalid values will highlight in red.</p>
 				<div id="graph">
 					<div id="g1"></div>
 					<div id="g2"></div>
@@ -180,25 +181,39 @@
 						<label for="b31">20K</label>
 					</li>
 				</ul>				
+			</fieldset>
+			<fieldset id="presetname">
+				<legend>Preset Name</legend>
+				<h2>2. Assign a Preset Name</h2>
+				<p>Give your GEQ preset a name. Only letters, numbers, and spaces are allowed (for now). Maximum limit 30 characters.</p>
 				<label for="name" id="forname" placeholder="Preset Name"></label><input type="text" id="name" value="Preset Name" size="30" maxlength="20" onfocus="empty(this)" onkeyup="clean()" onkeydown="clean()" />
 				<input type="button" form="GEQ" value="Reset" onClick="window.location.reload()" />
 			</fieldset>
-			<fieldset>
-				<legend>XML</legend>
-				<div id="instructions">
-					<p>Click on the XML code that appears to the left. Copy and paste that into a text file. Save it with same preset name plus ".xml" (e.g. "My First Preset.xml").</p>
-					<p>Put that file in the folder where Universal Control stores the GEQ presets. On a Mac that can be found in your user folder under:
-					<pre><code><textarea id="loc" rows="1" onClick="highlightall('loc')";>~/Documents/PreSonus/StudioLive/Library/Presets/geq</textarea></code></pre>
-					</p>
-					<p>Now when you fire up Universal Control you'll be able to load this preset onto your StudioLive console.</p>
-				</div>
+			<fieldset id="xmldata">
+				<legend>XML Data</legend>
 				<pre><code><textarea id="xml" rows="36" onClick="highlightall('xml')";>The XML code will automatically appear here. Edit the frequency band values using the input fields above.</textarea></code></pre>
+			</fieldset>
+			<fieldset id="finish">
+				<legend>Finishing Up</legend>
+				<div id="instructions">
+					<h2>3. Save the File</h2>
+					<ol>
+						<li>Click on the XML code that appears to the left. Copy and paste that into a text file.</li>
+						<li>Save the text file with the same preset name plus ".xml" like this:
+						<pre><code><textarea id="filename" rows="1" onClick="highlightall('filename')";>Preset Name.xml</textarea></code></pre>
+						</li>
+						<li>Put that XML file in the folder where Universal Control stores the GEQ presets. On a Mac that can be found in your user folder under:
+						<pre><code><textarea id="loc" rows="1" onClick="highlightall('loc')";>~/Documents/PreSonus/StudioLive/Library/Presets/geq</textarea></code></pre>
+						</li>
+						<li>Now when you fire up Universal Control you'll be able to load this preset onto your first generation StudioLive mixing console.</li>
+					</ol>
+				</div>
 			</fieldset>
 		</form>
 	</div>
-	<div class="footer">
+	<div id="footer">
 		<small><strong>DISCLAIMER:</strong> This page is provided simply as a tool that hopefully makes audio engineering easier. No guarantees are given that it will work nor will responsibility be accepted for damages resulting from its use. Also, no claims of affiliation with <a href="http://presonus.com" title"presonus.com" alt="link to the official PreSonus website" target="_blank">PreSonus Audio Electronics, Inc.</a> is implied nor are any infringements of their intellectual property intended. Use at your own risk, for free, with joy, responsibility, good intentions, and pure heart.</p>
-		<p><a href="https://github.com/scotttroyer/GEQgen">Fork this project on GitHub</a> | <a href="https://github.com/scotttroyer/GEQgen/blob/master/LICENSE">MIT License</a> | Read more about <a href="http://scotttroyer.com">the author</a> of this project.</p>
+		<p><a href="http://scotttroyer.com">Scott Troyer</a> | <a href="https://github.com/scotttroyer/GEQgen" title="Fork this project on GitHub" target="_blank">GitHub</a> | <a href="https://github.com/scotttroyer/GEQgen/blob/master/LICENSE" target="_blank">MIT License</a></p>
 		</small>
 	</div>
 </body>
